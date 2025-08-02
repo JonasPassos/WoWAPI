@@ -53,7 +53,7 @@ internal class Program
         var request = new RestRequest("data/wow/playable-race/index", Method.Get);
         request.AddParameter("namespace", "static-us");
         request.AddParameter("locale", "pt_BR");
-        request.AddParameter("access_token", token);
+        request.AddHeader("Authorization", $"Bearer {token}");
 
         var response = await client.ExecuteAsync(request);
         if (!response.IsSuccessful || response.Content == null)
