@@ -3,7 +3,7 @@ using RestSharp;
 
 internal class Program
 {
-    private const string ClientId = "YOUR_CLIENT";
+    private const string ClientId = "";
     private const string ClientSecret = "";
 
     private static async Task Main(string[] args)
